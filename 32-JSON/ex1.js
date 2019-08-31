@@ -1,0 +1,15 @@
+var readlineSync = require('readline-sync');
+var fs = require('fs');
+var students = [];
+var student = {};
+name = readlineSync.question('your name: ');
+var age = readlineSync.question('your age: ');
+var clas = readlineSync.question('your class: ');
+student.name = name;
+student.age = parseInt(age);
+student.class = clas;
+students.push(student);
+// fs.writeFileSync('./data.js',students);
+console.log(students);
+var text = fs.readFileSync('./data.js',{encoding: 'utf8'});
+console.log(text);
